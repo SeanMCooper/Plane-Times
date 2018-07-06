@@ -1,0 +1,11 @@
+#container{
+    margin: 5%;
+}
+
+#jumbotext{
+    margin: auto; text-align: center;
+}
+
+body {
+    background-image: url(Skies.jpg)
+}
