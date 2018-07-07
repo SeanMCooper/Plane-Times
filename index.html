@@ -17,6 +17,20 @@
 
     <div class="card">
         <div class="card-header">Current Plane Schedule</div>
+        <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Flight Path</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                          </tr>
+                        </thead>
+                        <tbody id = "tableBodyData">
+                        </tbody>
+        </table>
+
         <div class="card-body">
             <tr>
                 
@@ -37,7 +51,7 @@
                         <input type="text" class="form-control" id="whereGoing" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="startTime">First Train Time (HH:mm - military time)</label>
+                        <label for="startTime">First Plane Time (HH:mm - military time)</label>
                         <input type="text" class="form-control" id="startTime" placeholder="">
                     </div>
                     <div class="form-group">
