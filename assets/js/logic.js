@@ -47,6 +47,7 @@ database.ref().on("child_added", function(childSnapshot){
     console.log("XXXXXXXXXXXXXXXXXXX")
     console.log(sv)
 
+    /// DEALS WITH TIME
     var tRemainder = moment().diff(moment.unix(sv.startTime), "minutes") % sv.howOften;
     var tMinutesTillTrain = sv.howOften - tRemainder;
     var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm A");
@@ -66,16 +67,6 @@ database.ref().on("child_added", function(childSnapshot){
     newPlaneRow.append(tdTimeAway);
     console.log(newPlaneRow);
     $("#tableBodyData").prepend(newPlaneRow);
-
-    
-    /// DEALS WITH TIME
-
-    
-
-    console.log(nextTrain) 
-    console.log(tMinutesTillTrain)
-    console.log("^^ Time to arrival and Time of Arrival ^^^")
-     
   
 }, function(errorOject){
     console.log("Error:" + errorOject.code);
